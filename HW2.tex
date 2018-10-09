@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+\title{Homework 2}
+\author{Ziming Ji\\ 
+PHY 539: Introduction to String Theory}
+ 
+\maketitle
+ 
+\section{Problem 1}
+First we find the mode expansion of the space-time Lorentz generator $J^{\mu\nu}$ of a bosonic open string. By definition we have 
+\begin{equation}
+J^{\mu\nu}=\int_{0}^{\pi} J^{\mu\nu}_0 d\sigma = \frac{1}{\pi l_s^2}\int_{0}^{\pi}(X^\mu \dot{X}^\nu-X^\nu \dot{X}^\mu) d\sigma.
+\end{equation}
+Plugging in the mode expansion of $X$ field and its derivative:
+\begin{equation}
+\begin{aligned}
+X^\mu(\tau,\sigma)=x^\mu+l_s^2 p^\mu \tau+il_s\sum\limits_{m\neq 0}&\frac{1}{m}\alpha^\mu_m e^{-im\tau}\text{cos}(m\sigma)\\
+\dot{X}^\mu(\tau,\sigma)=l_s^2 p^\mu+l_s\sum\limits_{m\neq 0}\alpha^\mu_m &e^{-im\tau}\text{cos}(m\sigma),
+\end{aligned}
+\end{equation}
+we obtain(omitting terms that vanish after integration):
+\begin{equation}
+\begin{aligned}
+J^{\mu\nu}=&\frac{1}{\pi l_s^2}\int_{0}^{\pi} d\sigma (l_s^2 x^\mu p^\nu+l_s^4 p^\mu p^\nu \tau+il_s^2\text{cos}(m\sigma)^2\sum\limits_{m=1}^\infty\frac{1}{m}(\alpha_m^\mu \alpha_{-m}^\nu-\alpha_{-m}^\mu \alpha_m^\nu+\alpha_m^\mu \alpha_{m}^\nu e^{-2im\tau}-\alpha_{-m}^\mu \alpha_{-m}^\nu e^{2im\tau})\\
+&-l_s^2 x^\nu p^\mu-l_s^4 p^\nu p^\mu \tau-il_s^2\text{cos}(m\sigma)^2\sum\limits_{m=1}^\infty\frac{1}{m}(\alpha_m^\nu \alpha_{-m}^\mu-\alpha_{-m}^\nu \alpha_m^\mu+\alpha_m^\nu \alpha_{m}^\mu e^{-2im\tau}-\alpha_{-m}^\nu \alpha_{-m}^\mu e^{2im\tau}))\\
+=&\frac{1}{\pi l_s^2}[\pi l_s^2(x^\mu p^\nu-x^\nu p^\mu)+il_s^2 \frac{\pi}{2}\sum\limits_{m=1}^\infty\frac{1}{m}(2\alpha_m^\mu \alpha_{-m}^\nu-2\alpha_m^\nu \alpha_{-m}^\mu)]\\
+=&x^\mu p^\nu-x^\nu p^\mu+i\sum\limits_{m=1}^\infty\frac{1}{m}(\alpha_m^\mu \alpha_{-m}^\nu-\alpha_m^\nu \alpha_{-m}^\mu).
+\end{aligned}
+\end{equation}
+Applying the canonical commutation relation:
+\begin{equation}
+[x^\mu, p^\nu]=i\eta^{\mu\nu},\quad[x^\mu, x^\nu]=[p^\mu, p^\nu]=0,\quad[\alpha^\mu_m, \alpha^\nu_n]=m\eta^{\mu\nu}\delta_{m+n,0},
+\end{equation}
+we read that $[p^\mu, p^\nu]=0$ immediately. And it is not hard to see that
+\begin{equation}
+[p^\mu, J^{\nu\sigma}]=[p^\mu, x^\nu p^\sigma-x^\sigma p^\nu]=i\eta^{\sigma\mu}p^\nu-i\eta^{\nu\mu}p^\sigma.
+\end{equation}
+Lastly, $[J^{\mu\nu}, J^{\sigma\lambda}]$ can be separated into two terms:
+\begin{equation}
+\begin{aligned}[t]
+&[J^{\mu\nu}, J^{\sigma\lambda}]=[x^\mu p^\nu-x^\nu p^\mu, x^\sigma p^\lambda-x^\lambda p^\sigma]\\
+&-[\sum\limits_{m=1}^\infty\frac{1}{m}(\alpha_m^\mu \alpha_{-m}^\nu-\alpha_m^\nu \alpha_{-m}^\mu),\sum\limits_{m=1}^\infty\frac{1}{m}(\alpha_m^\sigma \alpha_{-m}^\lambda-\alpha_m^\lambda \alpha_{-m}^\sigma)]
+\end{aligned}
+\end{equation}
+First we have $[x^\mu p^\nu,x^\sigma p^\lambda]=i\eta^{\mu\lambda}x^\sigma p^\nu-i\eta^{\sigma\nu}x^\mu p^\lambda$. Applying this we get:
+\begin{equation}
+\begin{aligned}[t]
+[x^\mu p^\nu-x^\nu p^\mu &, x^\sigma p^\lambda-x^\sigma p^\lambda]=i\eta^{\mu\lambda}x^\sigma p^\nu-i\eta^{\sigma\nu}x^\mu p^\lambda-i\eta^{\mu\sigma}x^\lambda p^\nu+i\eta^{\lambda\nu}x^\mu p^\sigma\\
+&-i\eta^{\nu\lambda}x^\sigma p^\mu+i\eta^{\sigma\mu}x^\nu p^\lambda+i\eta^{\nu\sigma}x^\lambda p^\mu-i\eta^{\lambda\mu}x^\nu p^\sigma
+\end{aligned}
+\end{equation}
+\end{document}
