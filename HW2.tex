@@ -2,6 +2,7 @@
  
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
+\usepackage{physics}
  
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\R}{\mathbb{R}}
@@ -66,10 +67,32 @@ Lastly, $[J^{\mu\nu}, J^{\sigma\lambda}]$ can be separated into two terms:
 \end{aligned}
 \end{equation}
 First we have $[x^\mu p^\nu,x^\sigma p^\lambda]=i\eta^{\mu\lambda}x^\sigma p^\nu-i\eta^{\sigma\nu}x^\mu p^\lambda$. Applying this we get:
-\begin{equation}
+\begin{equation} \label{commu1}
 \begin{aligned}[t]
 [x^\mu p^\nu-x^\nu p^\mu &, x^\sigma p^\lambda-x^\sigma p^\lambda]=i\eta^{\mu\lambda}x^\sigma p^\nu-i\eta^{\sigma\nu}x^\mu p^\lambda-i\eta^{\mu\sigma}x^\lambda p^\nu+i\eta^{\lambda\nu}x^\mu p^\sigma\\
-&-i\eta^{\nu\lambda}x^\sigma p^\mu+i\eta^{\sigma\mu}x^\nu p^\lambda+i\eta^{\nu\sigma}x^\lambda p^\mu-i\eta^{\lambda\mu}x^\nu p^\sigma
+&-i\eta^{\nu\lambda}x^\sigma p^\mu+i\eta^{\sigma\mu}x^\nu p^\lambda+i\eta^{\nu\sigma}x^\lambda p^\mu-i\eta^{\lambda\mu}x^\nu p^\sigma.
 \end{aligned}
 \end{equation}
+Second, after applying $[\alpha_m^\mu \alpha_{-m}^\nu, \alpha_m^\sigma \alpha_{-m}^\lambda]=m\eta^{\mu\lambda}a_m^\sigma a_{-m}^\nu-m\eta^{\nu\sigma}a_m^\mu a_{-m}^\lambda$, we have
+\begin{equation} \label{commu2}
+\begin{aligned}[t]
+&[\sum\limits_{m=1}^\infty\frac{1}{m}(\alpha_m^\mu \alpha_{-m}^\nu-\alpha_m^\nu \alpha_{-m}^\mu),\sum\limits_{m=1}^\infty\frac{1}{m}(\alpha_m^\sigma \alpha_{-m}^\lambda-\alpha_m^\lambda \alpha_{-m}^\sigma)]=\sum\limits_{m=1}^\infty\frac{1}{m}(\eta^{\mu\lambda}a_m^\sigma a_{-m}^\nu-\eta^{\nu\sigma}a_m^\mu a_{-m}^\lambda\\
+&-\eta^{\mu\sigma}a_m^\lambda a_{-m}^\nu+\eta^{\nu\lambda}a_m^\mu a_{-m}^\sigma-\eta^{\nu\lambda}a_m^\sigma a_{-m}^\mu+\eta^{\mu\sigma}a_m^\nu a_{-m}^\lambda+\eta^{\nu\sigma}a_m^\lambda a_{-m}^\mu-\eta^{\mu\lambda}a_m^\nu a_{-m}^\sigma).
+\end{aligned}
+\end{equation}
+It is not hard to see from now that matching equation \ref{commu1} and \ref{commu2}, one can obtain the desired commutation relation for Lorentz generators:
+\begin{equation}
+\begin{aligned}[t]
+[J^{\mu\nu}, J^{\sigma\lambda}]=-i\eta^{\nu\sigma}J^{\mu\lambda}+i\eta^{\mu\sigma}J^{\nu\lambda}+i\eta^{\nu\lambda}J^{\mu\sigma}-i\eta^{\mu\lambda}J^{\nu\sigma}.
+\end{aligned}
+\end{equation}
+\section{Problem 2}
+\begin{paragraph}{a)}
+First massive level of $D=26$ open string is the combination of two kinds of excitations: $\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}$ and $\alpha_{-2}\ket{0;k}$. A general state is $(s_{\mu\nu}\alpha_{-1}^\mu\alpha_{-1}^\nu+v_\mu\alpha_{-2}^\mu)\ket{0;k}$. Physical state conditions are the constraints that $L_m\ket{\phi}=0$ for $m>0$ and $(L_0-1)\ket{\phi}=0$.  The second one, also called mass shell condition, gives $\alpha' M^2=1$ or $-\alpha' k^\mu k_\mu=1$. The first one need to be examined more carefully. See what we have in hand:
+\begin{equation}
+\begin{aligned}[t]
+L_m \alpha_{-2}^\mu \ket{0;k}=\frac{1}{2}\sum\limits_{n=-\infty}^{\infty}\alpha_{m-n}^\lambda\alpha_n^\sigma \eta^{\lambda\sigma}
+\end{aligned}
+\end{equation}
+\end{paragraph}
 \end{document}
