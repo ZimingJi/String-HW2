@@ -91,7 +91,15 @@ It is not hard to see from now that matching equation \ref{commu1} and \ref{comm
 First massive level of $D=26$ open string is the combination of two kinds of excitations: $\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}$ and $\alpha_{-2}\ket{0;k}$. A general state is $(s_{\mu\nu}\alpha_{-1}^\mu\alpha_{-1}^\nu+v_\mu\alpha_{-2}^\mu)\ket{0;k}$. Physical state conditions are the constraints that $L_m\ket{\phi}=0$ for $m>0$ and $(L_0-1)\ket{\phi}=0$.  The second one, also called mass shell condition, gives $\alpha' M^2=1$ or $-\alpha' k^\mu k_\mu=1$. The first one need to be examined more carefully. See what we have in hand:
 \begin{equation}
 \begin{aligned}[t]
-L_m \alpha_{-2}^\mu \ket{0;k}=\frac{1}{2}\sum\limits_{n=-\infty}^{\infty}\alpha_{m-n}^\lambda\alpha_n^\sigma \eta^{\lambda\sigma}
+&L_m \alpha_{-2}^\mu \ket{0;k}=\frac{1}{2}\sum\limits_{n=-\infty}^{\infty}\alpha_{m-n}^\lambda\alpha_n^\sigma \eta_{\lambda\sigma} \alpha_{-2}^\mu\ket{0;k} =\frac{1}{2} \alpha_{m-2}^\lambda \alpha_2^\sigma\eta_{\lambda\sigma} \alpha_{-2}^\mu \ket{0;k}=\alpha_{m-2}^\mu \ket{0;k}\\
+&L_m\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}=\frac{1}{2}\sum\limits_{n=-\infty}^\infty\alpha_{m-n}^\lambda\alpha_n^\sigma \eta_{\lambda\sigma}\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}=(\frac{1}{2}\alpha_{m-1}^\mu\alpha_{-1}^\nu+\frac{1}{2}\alpha_{m-1}^\nu\alpha_{-1}^\mu)\ket{0;k}
+\end{aligned}
+\end{equation}
+where we define $\text{sign}^\mu$ to be a vector $(-1,1,1,...,1)$. It is not hard to see that when $m>2$, all these terms are manifestly zero. When $m=1$, $L_1\ket{0;k}=0$ gives:
+\begin{equation}
+\begin{aligned}[t]
+[s_{\mu\nu}(\frac{1}{2}\alpha_{0}^\mu\alpha_{-1}^\nu+\frac{1}{2}\alpha_{0}^\nu\alpha_{-1}^\mu)+v_\sigma \alpha_{-1}^\sigma)]\ket{0;k}=0\\
+[s_{\mu\nu}(\frac{1}{4}l_s k^\mu\alpha_{-1}^\nu+\frac{1}{4}l_s k^\nu\alpha_{-1}^\mu)+v_\sigma \alpha_{-1}^\sigma)]\ket{0;k}=0\\
 \end{aligned}
 \end{equation}
 \end{paragraph}
