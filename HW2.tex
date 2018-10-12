@@ -88,19 +88,42 @@ It is not hard to see from now that matching equation \ref{commu1} and \ref{comm
 \end{equation}
 \section{Problem 2}
 \begin{paragraph}{a)}
-First massive level of $D=26$ open string is the combination of two kinds of excitations: $\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}$ and $\alpha_{-2}\ket{0;k}$. A general state is $(s_{\mu\nu}\alpha_{-1}^\mu\alpha_{-1}^\nu+v_\mu\alpha_{-2}^\mu)\ket{0;k}$. Physical state conditions are the constraints that $L_m\ket{\phi}=0$ for $m>0$ and $(L_0-1)\ket{\phi}=0$.  The second one, also called mass shell condition, gives $\alpha' M^2=1$ or $-\alpha' k^\mu k_\mu=1$. The first one need to be examined more carefully. See what we have in hand:
+First massive level of $D=26$ open string is the combination of two kinds of excitations: $\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}$ and $\alpha_{-2}\ket{0;k}$. A general state is $(s_{\mu\nu}\alpha_{-1}^\mu\alpha_{-1}^\nu+v_\mu\alpha_{-2}^\mu)\ket{0;k}$. Physical state conditions are the constraints that $L_m\ket{\phi}=0$ for $m>0$ and $(L_0-1)\ket{\phi}=0$.  The second one, also called mass shell condition, gives $\alpha' M^2=1$ or $-\alpha' k^\mu k_\mu=1$. The first one need to be examined more carefully. It is not hard to see that only $L_1 \text{and } L_2$ conditions are not manifestly zero:
 \begin{equation}
 \begin{aligned}[t]
-&L_m \alpha_{-2}^\mu \ket{0;k}=\frac{1}{2}\sum\limits_{n=-\infty}^{\infty}\alpha_{m-n}^\lambda\alpha_n^\sigma \eta_{\lambda\sigma} \alpha_{-2}^\mu\ket{0;k} =\frac{1}{2} \alpha_{m-2}^\lambda \alpha_2^\sigma\eta_{\lambda\sigma} \alpha_{-2}^\mu \ket{0;k}=\alpha_{m-2}^\mu \ket{0;k}\\
-&L_m\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}=\frac{1}{2}\sum\limits_{n=-\infty}^\infty\alpha_{m-n}^\lambda\alpha_n^\sigma \eta_{\lambda\sigma}\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}=(\frac{1}{2}\alpha_{m-1}^\mu\alpha_{-1}^\nu+\frac{1}{2}\alpha_{m-1}^\nu\alpha_{-1}^\mu)\ket{0;k}
+L_1\alpha_{-2}^\mu\ket{0;k}&=\frac{1}{2}\sum\limits_{n=-\infty}^\infty\alpha_{1-n}^\lambda\alpha_n^\sigma\eta_{\lambda\sigma}\alpha_{-2}^\mu\ket{0;k}=\frac{1}{2}(\alpha_{2}^\lambda\alpha_{-1}^\sigma\eta_{\lambda\sigma}\alpha_{-2}^\mu+\alpha_{-1}^\lambda\alpha_{2}^\sigma\eta_{\lambda\sigma}\alpha_{-2}^\mu)\ket{0;k}\\
+&=(\alpha_{-1}^\sigma\eta_{\lambda\sigma}\eta^{\lambda\mu}+\alpha_{-1}^\lambda\eta_{\lambda\sigma}\eta^{\sigma\mu})\ket{0;k}=2\alpha_{-1}^{\mu}\ket{0;k},\\
+L_1\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}&=\frac{1}{2}\sum\limits_{n=-\infty}^\infty\alpha_{1-n}^\lambda\alpha_n^\sigma\eta_{\lambda\sigma}\alpha_{-1}^\mu\alpha_{-1}^\nu\ket{0;k}=\frac{1}{2}(\alpha_{1}^\lambda\alpha_0^\sigma\eta_{\lambda\sigma}\alpha_{-1}^\mu\alpha_{-1}^\nu+\alpha_{0}^\lambda\alpha_1^\sigma\eta_{\lambda\sigma}\alpha_{-1}^\mu\alpha_{-1}^\nu)\ket{0;k}\\
+&=\frac{1}{2}[\frac{1}{2}l_s k^\sigma\eta_{\lambda\sigma}(\eta^{\lambda\mu}\alpha_{-1}^\nu+\eta^{\lambda\nu}\alpha_{-1}^\mu)+\frac{1}{2}l_s k^\lambda\eta_{\lambda\sigma}(\eta^{\sigma\mu}\alpha_{-1}^{\nu}+\eta^{\sigma\nu}\alpha_{-1}^{\mu})]\ket{0;k}\\
+&=\frac{1}{2}l_s(k^\mu\alpha_{-1}^\nu+k^\nu\alpha_{-1}^\mu)\ket{0;k}.
 \end{aligned}
 \end{equation}
-where we define $\text{sign}^\mu$ to be a vector $(-1,1,1,...,1)$. It is not hard to see that when $m>2$, all these terms are manifestly zero. When $m=1$, $L_1\ket{0;k}=0$ gives:
-\begin{equation}
-\begin{aligned}[t]
-[s_{\mu\nu}(\frac{1}{2}\alpha_{0}^\mu\alpha_{-1}^\nu+\frac{1}{2}\alpha_{0}^\nu\alpha_{-1}^\mu)+v_\sigma \alpha_{-1}^\sigma)]\ket{0;k}=0\\
-[s_{\mu\nu}(\frac{1}{4}l_s k^\mu\alpha_{-1}^\nu+\frac{1}{4}l_s k^\nu\alpha_{-1}^\mu)+v_\sigma \alpha_{-1}^\sigma)]\ket{0;k}=0\\
-\end{aligned}
-\end{equation}
+Thus $L_1\ket{\phi}$ means $\frac{1}{2}l_s s_{\mu\nu}k^\mu+v_\nu=0$. \\
+
+Similarly, when $m=2$, $L_2\ket{0;k}=0$ gives: $s_{\mu}^\mu+l_s v_\sigma k^\sigma=0$. We have $\frac{D^2+D}{2}+D-D-1=350$ degrees of freedom right now. We will reduce them after considering gauge invariance.
 \end{paragraph}
+\begin{paragraph}{b)}
+Null state meets physical conditions but is orthogonal to every physical state including itself. These are states with zero norm: $\bra{\phi}\ket{\phi}=0$: (real coefficients?)
+\begin{equation}
+\begin{aligned}[t]
+\bra{0;k}(s_{\delta\gamma}\alpha_{1}^\gamma\alpha_{1}^\delta+v_\lambda\alpha_{2}^\lambda)(s_{\mu\nu}\alpha_{-1}^\mu\alpha_{-1}^\nu+v_\sigma\alpha_{-2}^\sigma)\ket{0;k}=0\\
+\bra{0;k}(s_{\delta\gamma} s_{\mu\nu} \alpha_1^\gamma\alpha_1^\delta\alpha_{-1}^\mu\alpha_{-1}^\nu+v_\lambda v_\sigma \alpha_2^\lambda \alpha_{-2}^\sigma)\ket{0;k}=0\\
+\bra{0;k}[s_{\delta\gamma} s_{\mu\nu} (\eta^{\gamma\mu}\eta^{\delta\nu}+\eta^{\gamma\nu}\eta^{\mu\delta}) +2 v_\lambda v_\sigma \eta^{\lambda\sigma}]\ket{0;k}=0\\
+\bra{0;k}[s_{\delta\gamma} s_{\mu\nu} (\eta^{\gamma\mu}\eta^{\delta\nu}+\eta^{\gamma\nu}\eta^{\mu\delta}) +2 v_\lambda v_\sigma \eta^{\lambda\sigma}]\ket{0;k}=0.
+\end{aligned}
+\end{equation}
+This tells us that if coefficients have relation $s_\delta^\mu s_\mu^\delta+v_\lambda v^\lambda=0$, the state is null. And $\bra{\phi}\ket{\psi}=0$ for an arbitrary physical state $\ket{\psi}$ tells us that $s_\delta^\mu s_\mu'^\delta+v_\lambda v'^{\lambda}=0$.\\
+
+This is actually hopeless. One should instead use the construction of null states basis and one can find $D+1-1=D$ independent basis. Thus the total dof is $350-26=24$.
+\end{paragraph}
+\section{Problem 3}
+A general state is $t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+v_\sigma\alpha_{-3}^\sigma\ket{0;k}$. $s_{\mu\nu}$ is not by definition symmetric any more. Mass-shell condition gives $-\alpha' k^\mu k_\mu=2$. $L_m\ket{\phi}=0$ gives non-trivial conditions only for $m=1,2,\text{ and }3$
+\begin{equation}
+\begin{aligned}[t]
+\frac{1}{2}\sum\limits_{n=-\infty}^\infty \alpha_{m-n}^\gamma\alpha_n^\delta\eta_{\gamma\delta}(t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+v_\sigma\alpha_{-3}^\sigma\ket{0;k})=0\\
+\frac{1}{2}[\alpha_{m-1}^\gamma\alpha_1^\delta\eta_{\gamma\delta}t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+(\alpha_{m-1}^\gamma\alpha_1^\delta\eta_{\gamma\delta}+\alpha_{m-2}^\gamma\alpha_2^\delta\eta_{\gamma\delta})s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+\alpha_{m-3}^\gamma\alpha_3^\delta\eta_{\gamma\delta}v_\sigma\alpha_{-3}^\sigma]\ket{0;k}=0\\
+\frac{1}{2}[\alpha_{m-1}^\gamma\eta_{\gamma\delta}t_{\beta\theta\xi}(\eta^{\delta\beta}\alpha_{-1}^\theta\alpha_{-1}^\xi+\eta^{\theta\delta}\alpha_{-1}^\beta\alpha_{-1}^\xi+\eta^{\delta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta)+s_{\mu\nu}(\alpha_{m-1}^\gamma\alpha_{-2}^\mu\eta^{\delta\nu}\eta_{\gamma\delta}+2\alpha_{m-2}^\gamma\alpha_{-1}^\nu\eta^{\delta\mu}\eta_{\gamma\delta})\\
++3\alpha_{m-3}^\gamma\eta_{\gamma\delta}v_\sigma\eta^{\delta\sigma}]\ket{0;k}=0
+\end{aligned}
+\end{equation} 
 \end{document}
