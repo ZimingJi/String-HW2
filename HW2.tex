@@ -114,16 +114,38 @@ Null state meets physical conditions but is orthogonal to every physical state i
 \end{equation}
 This tells us that if coefficients have relation $s_\delta^\mu s_\mu^\delta+v_\lambda v^\lambda=0$, the state is null. And $\bra{\phi}\ket{\psi}=0$ for an arbitrary physical state $\ket{\psi}$ tells us that $s_\delta^\mu s_\mu'^\delta+v_\lambda v'^{\lambda}=0$.\\
 
-This is actually hopeless. One should instead use the construction of null states basis and one can find $D+1-1=D$ independent basis. Thus the total dof is $350-26=24$.
+This seems hopeless. One should instead use the construction of null states basis and one can find $D+1-1=D$ independent basis($L_{-1}c_\mu\alpha_{-1}^\mu\ket{0;k}$ and $(L_{-2}+\frac{3}{2}L_{-1}^2)\ket{0;k}$ with $c_\mu k^\mu=0$). A gauge transformation is a shift like $\ket{\phi}+A_\mu\ket{null}^\mu$. This will not change any measurement $\bra{\phi}\mathcal{O}\ket{\phi}$.
+\end{paragraph}
+\begin{paragraph}{c)}
+Thus the total dof is $350-26=324$. The rest is to show that the states transfer under $SO(25)$. ?
 \end{paragraph}
 \section{Problem 3}
-A general state is $t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+v_\sigma\alpha_{-3}^\sigma\ket{0;k}$. $s_{\mu\nu}$ is not by definition symmetric any more. Mass-shell condition gives $-\alpha' k^\mu k_\mu=2$. $L_m\ket{\phi}=0$ gives non-trivial conditions only for $m=1,2,\text{ and }3$
+A general state is $t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+v_\sigma\alpha_{-3}^\sigma\ket{0;k}$. $s_{\mu\nu}$ is not by definition symmetric any more. Mass-shell condition gives $-\alpha' k^\mu k_\mu=2$. $L_m\ket{\phi}=0$ gives non-trivial conditions only for $m=1,2,\text{ and }3$.
 \begin{equation}
 \begin{aligned}[t]
-\frac{1}{2}\sum\limits_{n=-\infty}^\infty \alpha_{m-n}^\gamma\alpha_n^\delta\eta_{\gamma\delta}(t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+v_\sigma\alpha_{-3}^\sigma\ket{0;k})=0\\
-\frac{1}{2}[\alpha_{m-1}^\gamma\alpha_1^\delta\eta_{\gamma\delta}t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+(\alpha_{m-1}^\gamma\alpha_1^\delta\eta_{\gamma\delta}+\alpha_{m-2}^\gamma\alpha_2^\delta\eta_{\gamma\delta})s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+\alpha_{m-3}^\gamma\alpha_3^\delta\eta_{\gamma\delta}v_\sigma\alpha_{-3}^\sigma]\ket{0;k}=0\\
-\frac{1}{2}[\alpha_{m-1}^\gamma\eta_{\gamma\delta}t_{\beta\theta\xi}(\eta^{\delta\beta}\alpha_{-1}^\theta\alpha_{-1}^\xi+\eta^{\theta\delta}\alpha_{-1}^\beta\alpha_{-1}^\xi+\eta^{\delta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta)+s_{\mu\nu}(\alpha_{m-1}^\gamma\alpha_{-2}^\mu\eta^{\delta\nu}\eta_{\gamma\delta}+2\alpha_{m-2}^\gamma\alpha_{-1}^\nu\eta^{\delta\mu}\eta_{\gamma\delta})\\
-+3\alpha_{m-3}^\gamma\eta_{\gamma\delta}v_\sigma\eta^{\delta\sigma}]\ket{0;k}=0
+L_1\ket{\phi}=\frac{1}{2}\sum\limits_{n=-\infty}^\infty \alpha_{1-n}^\gamma\alpha_n^\delta\eta_{\gamma\delta}(t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+v_\sigma\alpha_{-3}^\sigma\ket{0;k})=0\\
+\frac{1}{2}[2\alpha_{0}^\gamma\alpha_1^\delta\eta_{\gamma\delta}t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+(2\alpha_{0}^\gamma\alpha_1^\delta\eta_{\gamma\delta}+\alpha_{-1}^\gamma\alpha_2^\delta\eta_{\gamma\delta})s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+\alpha_{-2}^\gamma\alpha_3^\delta\eta_{\gamma\delta}v_\sigma\alpha_{-3}^\sigma]\ket{0;k}=0\\
+\frac{1}{2}[2\alpha_{0}^\gamma\eta_{\gamma\delta}t_{\beta\theta\xi}(\eta^{\delta\beta}\alpha_{-1}^\theta\alpha_{-1}^\xi+\eta^{\theta\delta}\alpha_{-1}^\beta\alpha_{-1}^\xi+\eta^{\delta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta)+s_{\mu\nu}(2\alpha_{0}^\gamma\alpha_{-2}^\mu\eta^{\delta\nu}\eta_{\gamma\delta}+2\alpha_{-1}^\gamma\alpha_{-1}^\nu\eta^{\delta\mu}\eta_{\gamma\delta})\\
++3\alpha_{-2}^\gamma\eta_{\gamma\delta}v_\sigma\eta^{\delta\sigma}]\ket{0;k}=0\\
+\frac{1}{2}[2t_{\beta\theta\xi}(\alpha_{0}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+\alpha_{0}^\theta\alpha_{-1}^\beta\alpha_{-1}^\xi+\alpha_{0}^\xi\alpha_{-1}^\beta\alpha_{-1}^\theta)+s_{\mu\nu}(2\alpha_{0}^\nu\alpha_{-2}^\mu+2\alpha_{-1}^\mu\alpha_{-1}^\nu)+3v_\sigma\alpha_{-2}^\sigma]\ket{0;k}=0
 \end{aligned}
-\end{equation} 
+\end{equation}
+The constraints that come from $L_1$ are $l_s s_{\mu\nu}k^{\nu}+3v_\mu=0$ and $3l_s t_{\beta\theta\xi}k^\beta+2s_{\theta\xi}=0$.
+\begin{equation}
+\begin{aligned}[t]
+L_2\ket{\phi}=\frac{1}{2}\sum\limits_{n=-\infty}^\infty \alpha_{2-n}^\gamma\alpha_n^\delta\eta_{\gamma\delta}(t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+v_\sigma\alpha_{-3}^\sigma\ket{0;k})=0\\
+\frac{1}{2}[\alpha_{1}^\gamma\alpha_1^\delta\eta_{\gamma\delta}t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+2\alpha_{0}^\gamma\alpha_2^\delta\eta_{\gamma\delta}s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+\alpha_{-1}^\gamma\alpha_3^\delta\eta_{\gamma\delta}v_\sigma\alpha_{-3}^\sigma]\ket{0;k}=0\\
+\frac{1}{2}[6t_{\beta\theta\xi}\eta^{\theta\xi}\alpha_{-1}^\beta+2l_s k^\mu s_{\mu\nu}\alpha_{-1}^\nu+3v_\sigma\alpha_{-1}^\sigma]\ket{0;k}=0
+\end{aligned}
+\end{equation}
+The constraint that comes from $L_2$ is $6t_{\beta\theta\xi}\eta^{\theta\xi}+2l_s k^\mu s_{\mu\beta}+3v_\beta=0$.
+\begin{equation}
+\begin{aligned}[t]
+L_3\ket{\phi}=\frac{1}{2}\sum\limits_{n=-\infty}^\infty \alpha_{3-n}^\gamma\alpha_n^\delta\eta_{\gamma\delta}(t_{\beta\theta\xi}\alpha_{-1}^\beta\alpha_{-1}^\theta\alpha_{-1}^\xi+s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+v_\sigma\alpha_{-3}^\sigma\ket{0;k})=0\\
+\frac{1}{2}[2\alpha_{2}^\gamma\alpha_1^\delta\eta_{\gamma\delta}s_{\mu\nu}\alpha_{-2}^\mu\alpha_{-1}^\nu+2\alpha_{0}^\gamma\alpha_3^\delta\eta_{\gamma\delta}v_\sigma\alpha_{-3}^\sigma]\ket{0;k}=\frac{1}{2}[4s_{\mu}^\mu+3l_s k^\sigma v_\sigma]\ket{0;k}=0
+\end{aligned}
+\end{equation}
+The constraint that comes from $L_3$ is $4s_{\mu}^\mu+3l_s k^\sigma v_\sigma=0$.\\
+
+Now we have $\frac{D(D-1)(D-2)}{6}+3D(D-1)+D+\frac{D^2+D}{2}+D-D-\frac{D^2+D}{2}-D-1=4549$ degrees of freedom. Gauge invariance will reduce it further.
 \end{document}
