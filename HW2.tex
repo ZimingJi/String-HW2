@@ -156,9 +156,25 @@ L_{-1}\ket{\chi_1}+L_{-2}\ket{\chi_2}=[g_{\mu\nu}(\alpha_0^\sigma\alpha_{-1 \sig
 +r_\lambda(\alpha_0^\mu\alpha_{-2}^\nu\eta_{\mu\nu}\alpha_{-1}^\lambda+\alpha_{-3}^\lambda)]\ket{0;k}
 \end{aligned}
 \end{equation}  
-All the tensors are rank three $g_{\mu\nu}\alpha_{0 \sigma}$, rank two $2g_{\mu\nu}+r_\nu\alpha_{0 \mu}$ and rank one $2h_\sigma+r_\sigma$. After imposing the physical constraints, we have $\frac{D(D+1)}{2}+D+D-D-1-1=375$ independent null state basis. The total dof is $3575-375=3200=2900+300$. The states decouple to a traceless symmetric $\frac{25\times 26\times 27}{6}=2900$ and anti-symmetric $\frac{25\times 24}{2}=300$ representations of $SO(25)$.
+All the tensors are rank three $g_{\mu\nu}\alpha_{0 \sigma}$, rank two $2g_{\mu\nu}+r_\nu\alpha_{0 \mu}$ and rank one $2h_\sigma+r_\sigma$. After imposing the physical constraints, we have $\frac{D(D+1)}{2}+D+D-D-1-1=375$ independent null state basis. The total dof is $3575-375=3200=2900+300$. The states decouple to a traceless symmetric $\frac{25\times 26\times 27}{6}=2900$ and anti-symmetric $\frac{25\times 24}{2}=300$ representations of $SO(25)$. (Because everything is manifestly covariant, the remaining components must transfer under $SO(\#)$?)
 \section{Problem 4}
 \begin{paragraph}{a)}
+\begin{equation}
+\begin{aligned}[t]
+J^{i-}=\frac{1}{2\pi\alpha'}\int d\sigma (X^i \dot{X}^- - X^-\dot{X}^i)
+\end{aligned}
+\end{equation}
+Where $X^-=x^-+2\alpha'p^-\tau+il_s\sum\limits_{n\neq 0}\frac{1}{n}\alpha_n^- e^{-in\tau}\text{cos}n\sigma$, $\alpha_n^-=\frac{1}{p^+l_s}(\frac{1}{2}\sum\limits_{i=1}^{D-2}\sum\limits_{m=-\infty}^{\infty}:\alpha_{n-m}^i\alpha_m^i:-a\delta_{n,0})$ and $X^i=x^i+2\alpha'p^i\tau+il_s\sum\limits_{m\neq 0}\frac{1}{m}\alpha_m^i e^{-in\tau}\text{cos}m\sigma$. The $\tau$ terms are cancelled and we have:
+\begin{equation}
+\begin{aligned}[t]
+J^{i-}&=\frac{1}{2\pi\alpha'}\int d\sigma (2\alpha'x^i p^--2\alpha'p^i x^-+il_s^2\sum\limits_{m\neq 0}\text{cos}^2 m\alpha \frac{1}{m}(2\alpha_{-m}^i\alpha_m^- -2\alpha_{-m}^-\alpha_m^i))\\
+&=x^i p^--p^i x^-+\sum\limits_{m\neq 0}\frac{i}{m}(\alpha_{-m}^i\alpha_m^- -\alpha_{-m}^-\alpha_m^i),
+\end{aligned}
+\end{equation}
+where $\alpha_m^-=\frac{1}{p^+l_s}(\frac{1}{2}\sum\limits_{i=1}^{D-2}\sum\limits_{n=-\infty}^{\infty}:\alpha_{m-n}^i\alpha_n^i:-a\delta_{m,0})$.
+\end{paragraph}
+\begin{paragraph}{b)}
+Note that $[x^-,p^i]=[x^i,p^-]=[x^-,p^-]=0$ and $[x^-,p^+]=-i$, $[x^-,\frac{1}{p^+} ]=i\frac{1}{(p^+)^2}$. $[x^j p^--p^j x^-,x^k p^--p^k x^-]$ vanishes manifestly. Defining $A=\sum\limits_{m\neq 0}\frac{i}{m}(\alpha_{-m}^i\alpha_m^- -\alpha_{-m}^-\alpha_m^i)$ for the mode terms then cross terms $[x^i,A]p^--p^i[x^-,A]+[A,x^i]p^--p^i[A,x^-]=0$. Then we should deal with commutators of the modes $[A,A']$. Some pre-calculations are:
 
 \end{paragraph}
 \end{document}
